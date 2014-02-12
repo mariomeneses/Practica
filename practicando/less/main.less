@@ -1,5 +1,9 @@
 @color-footer:#6C6E76; //variable 
+@opacity:0.5;
 
+.opacity{
+  opacity:@opacity;
+}
 
 html
 {
@@ -25,25 +29,55 @@ html
               background-color:#A4E0CC;
               color:grey;
               /*para Firefox*/
-            -moz-border-radius: 5px 5px 5px 5px;
-            /*para Safari y Chrome*/
-            -webkit-border-radius: 5px 5px 5px 5px;
-            /* para Opera */
-            border-radius: 5px 5px 5px 5px;
-            display:inline;
-            padding:10px;
-            &:hover{
-            border: 3px solid white;
-          }
+              -moz-border-radius: 5px 5px 5px 5px;
+              /*para Safari y Chrome*/
+              -webkit-border-radius: 5px 5px 5px 5px;
+              /* para Opera */
+              border-radius: 5px 5px 5px 5px;
+              display:inline;
+              padding:10px;
+                
+                &:hover{
+                  border: 3px solid white;
+                }
             }
 
           }
-          .jumbotron{
+          
+          #cont_img{
+          display:inline;
+          padding:20px;
+          
+                #a{
+                &:hover{
+                .opacity;
+                }
+                }
+                #b{
+                &:hover{
+                .opacity;
+                }
+                }
+                #c{
+                &:hover{
+                .opacity;
+                }
+                }
+                #d{
+                &:hover{
+                .opacity;
+                }
+                }
+
+
+
+
+            }
           }
         }
 
 
-}
+
 
 
 
