@@ -1,27 +1,50 @@
 @color-footer:#6C6E76; //variable 
 
 
-html{
-  position: relative;
-  min-height: 100%;
+html
+{
+
   
     body{
-      margin-bottom: 60px;
+          .dropdown-mio{
+            width:310px;
+            color:grey;
+          }
+          #id_mio{
+            background-color:#5398A2;
+            /*para Firefox*/
+            -moz-border-radius: 15px 15px 15px 15px;
+            /*para Safari y Chrome*/
+            -webkit-border-radius: 15px 15px 15px 15px;
+            /* para Opera */
+            border-radius: 15px 15px 15px 15px;
+            color:white;
+            padding:20px;
+            
+            #check{
+              background-color:#A4E0CC;
+              color:grey;
+              /*para Firefox*/
+            -moz-border-radius: 5px 5px 5px 5px;
+            /*para Safari y Chrome*/
+            -webkit-border-radius: 5px 5px 5px 5px;
+            /* para Opera */
+            border-radius: 5px 5px 5px 5px;
+            display:inline;
+            padding:10px;
+            &:hover{
+            border: 3px solid white;
+          }
+            }
 
-      .btn-group{
-
-      }
-
-      .navbar{
-        background-color:black;
-        color:white;
-      }
-
+          }
+          .jumbotron{
+          }
+        }
 
 
 }
 
-  }
 
 
 
