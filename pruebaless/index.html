@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+    <title>Probando con less+bootstrap</title>
+
+    <!--Aca van los estilos correspondientes al LESS-->
+
+ <link rel="stylesheet/less" type="text/css" href="less/bootstrap.less">
+
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Activo</a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li class="disabled"><a href="#">Menú disabled</a></li>
+            <li><a href="#">Menú 2</a></li>
+            <li><a href="#">Menú 3</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Menú 4</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Menú 5</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!-- INICIO FORM NAV -->
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Buscar">
+        </div>
+        <button type="submit" class="btn btn-default">Buscar</button>
+      </form>
+      <!-- FIN FORM NAV -->
+      <!-- MENU A LA DERECHA -->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">DERECHA 1</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menú Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Submenú 1</a></li>
+            <li><a href="#">Submenú 2</a></li>
+            <li><a href="#">Submenú 3</a></li>
+            <!-- DIVISOR CON 1 LINEA-->
+            <li class="divider"></li>
+            <li><a href="#">Submenú 4</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+  <!--INICIO CONTAINER  -->
+  <div class="container">
+    <!-- INICIO BOTONES-->
+    Botones
+    <p class="text-left"> <!-- alinea texto a la izquierda-->
+    <div class="btn-group">
+      <button type="button" class="btn btn-default">Left</button>
+      <button type="button" class="btn btn-default">Middle</button>
+      <button type="button" class="btn btn-default">Right</button>
+    </div>
+  </p>
+  
+      <div class="btn-group">
+          <button type="button" class="btn btn-default">1</button>
+          <button type="button" class="btn btn-default">2</button>
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            Dropdown
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Dropdown link</a></li>
+              <li><a href="#">Dropdown link</a></li>
+            </ul>
+        </div>
+      </div>
+  <p >
+      <div class="btn-group btn-group-lg">
+        <button type="button" class="btn btn-default">tamaño large Left</button>
+        <button type="button" class="btn btn-default">Middle</button>
+        <button type="button" class="btn btn-default">Right</button>
+      </div>
+  </p>
+
+  <p >
+      <div class="btn-group btn-group-md">
+        <button type="button" class="btn btn-default">tamaño medium Left</button>
+        <button type="button" class="btn btn-default">Middle</button>
+        <button type="button" class="btn btn-default">Right</button>
+      </div>
+  </p>
+
+    <p>
+      <div class="btn-group btn-group-sm">
+        <button type="button" class="btn btn-default">tamaño small Left</button>
+        <button type="button" class="btn btn-default">Middle</button>
+        <button type="button" class="btn btn-default">Right</button>
+      </div>
+  </p>
+
+
+  <p>
+    <div class="btn-group-vertical">
+      <button type="button" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-list"></span> Lista
+    </button>
+      <button type="button" class="btn btn-default">btn2</button>
+      <button type="button" class="btn btn-primary">btn Primary</button>
+      <button type="button" class="btn btn-success">btn Success</button>
+      <button type="button" class="btn btn-info">Info</button>
+      <button type="button" class="btn btn-warning">Warning</button>
+      <button type="button" class="btn btn-danger">Danger</button>
+      <button type="button" class="btn btn-link">Link</button>
+      <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+      <button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
+      <button type="button" class="btn btn-lg btn-primary" disabled="disabled">DISABLED button</button>
+
+    </div>
+    <p>
+    <!-- Split button -->
+    <div class="btn-group">
+      <button type="button" class="btn btn-default">Split</button>
+      <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Separated link</a></li>
+      </ul>
+    </div>
+    </p>
+
+    <p>
+      <div class="btn-group dropup">
+        <button type="button" class="btn btn-default">Dropup</button>
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <span class="caret"></span>
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+          <ul class="dropdown-menu">
+    <!-- Dropdown menu links -->
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+      </div>
+    </p>
+
+
+  </p>
+    <!-- FIN BOTONES-->
+
+  <!-- NAV BAR IZQUIERDO -->
+    <p>
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="#">NAV Izquierdo</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+    </p>
+  </div>
+  <!-- FIN CONTAINER-->
+
+
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    
+    <!-- LLAMANDO JQUERY-->
+    <script src="js/jquery-1.10.2.min.js"> </script>
+    <!--Aca van los script de LESS-->
+    <!--primero debes llamar la configiracion de LESS-->
+    <script>
+      less = {
+        env: "development",
+        logLevel: 2,
+        async: false,
+        fileAsync: false,
+        poll: 1000,
+        functions: {},
+        dumpLineNumbers: "comments",
+        relativeUrls: false,
+        rootpath: ":/a.com/"
+      };
+    </script>
+    <!--Luego el script de LESS-->
+    <script src="js/less.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
