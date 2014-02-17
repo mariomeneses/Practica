@@ -1,3 +1,9 @@
+<?php
+  include_once 'function/conexion.php';
+  include_once 'function/mensajes.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -31,13 +37,14 @@
 
     <div class="container">
       <div class="col-md-2">
-      <form class="form-signin" action="login.php" method="POST" role="form">
+      <form class="form-signin" action="index.php" method="POST" role="form">
         <h2 class="form-signin-heading">Login</h2>
-        <input type="email" class="form-control" placeholder="E-mail" required autofocus>
-        <input type="password" class="form-control" placeholder="Password" required>
+        <input type="email" class="form-control" name="email" placeholder="E-mail" required autofocus>
+        <input type="password" class="form-control" name="pass" placeholder="Password" required>
         <br>
-        <button class="btn btn-md btn-primary btn-block" value="enviar" type="submit">Ingresa</button>
+        <button class="btn btn-md btn-primary btn-block" name="login" value="enviar" type="submit">Ingresa</button>
       </form>
+
     </div>
   </div>
   <p></p>
@@ -45,14 +52,23 @@
   <div class="container">
     <div class="col-md-2">
         <h2 class="form-signing-heading">Registro</h2>
-      <form action="registro.php" method="POST">
-        <input type="text" class="form-control" placeholder="Nombre" required autofocus>
-        <input type="email" class="form-control" placeholder="E-mail" required autofocus>
-        <input type="password" class="form-control" placeholder="Password" required>
+      <form action="function/registro.php" method="POST">
+        <input type="text" class="form-control" name="nombre" placeholder="Nombre" required autofocus>
+        <input type="email" class="form-control" name="email" placeholder="E-mail" required autofocus>
+        <input type="password" class="form-control" name="pass" placeholder="Password" required>
         <br>
         <button class="btn btn-md btn-primary btn-block" value="enviar" type="submit">Registro</button>
       </form>
-    </div>
+      <?php 
+              if (@$_GET['err']) {
+              
+                  $mensaje = mensaje($_GET['err']);
+                  echo  "<div class=\"txt_ctr txt_error alerta\">";
+                  echo $mensaje;
+                  echo  "</div>";
+              
+              } 
+            ?>    </div>
     </div> <!-- /container -->
 
     <!-- Bootstrap core JavaScript
