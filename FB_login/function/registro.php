@@ -21,7 +21,7 @@
 				Values ('".$nombre."','".$email."','".$pass."')";
 				mysql_query($SQL);
 				
-            echo "<script>location.href='../$pagina.php?err=4';</script>";
+             echo "<script>location.href='../$pagina.php?err=4';</script>";
                                     
             }     
 	

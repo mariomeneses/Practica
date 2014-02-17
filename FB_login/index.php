@@ -1,9 +1,3 @@
-<?php
-  include_once 'function/conexion.php';
-  include_once 'function/mensajes.php';
-
-?>
-
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -34,42 +28,20 @@
   </head>
 
   <body>
+    <?php
+      session_start();
+      if(isset($_SESSION['email']))
+      {
+        ?>
 
-    <div class="container">
-      <div class="col-md-2">
-      <form class="form-signin" action="index.php" method="POST" role="form">
-        <h2 class="form-signin-heading">Login</h2>
-        <input type="email" class="form-control" name="email" placeholder="E-mail" required autofocus>
-        <input type="password" class="form-control" name="pass" placeholder="Password" required>
-        <br>
-        <button class="btn btn-md btn-primary btn-block" name="login" value="enviar" type="submit">Ingresa</button>
-      </form>
+        <a href="login.php?cerrar=session">Cerrar Sesión (<?php echo $_SESSION['email'];?> ) </a>
+        <?php
 
-    </div>
-  </div>
-  <p></p>
+      }else
+      echo "Acceso denegado";
+    ?>
 
-  <div class="container">
-    <div class="col-md-2">
-        <h2 class="form-signing-heading">Registro</h2>
-      <form action="function/registro.php" method="POST">
-        <input type="text" class="form-control" name="nombre" placeholder="Nombre" required autofocus>
-        <input type="email" class="form-control" name="email" placeholder="E-mail" required autofocus>
-        <input type="password" class="form-control" name="pass" placeholder="Password" required>
-        <br>
-        <button class="btn btn-md btn-primary btn-block" value="enviar" type="submit">Registro</button>
-      </form>
-      <?php 
-              if (@$_GET['err']) {
-              
-                  $mensaje = mensaje($_GET['err']);
-                  echo  "<div class=\"txt_ctr txt_error alerta\">";
-                  echo $mensaje;
-                  echo  "</div>";
-              
-              } 
-            ?>    </div>
-    </div> <!-- /container -->
+ <!-- /container -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
