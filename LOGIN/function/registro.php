@@ -14,14 +14,14 @@
 		$datos = mysql_fetch_row($consulta);
 
 			if ($filas>0){
-				echo "<script>location.href='../$pagina.php?err=3';</script>";
+				echo "CORREO EN USO";
 			}else{
 
 				$SQL = "Insert Into usuarios (nombre, email, pass) 
 				Values ('".$nombre."','".$email."','".$pass."')";
 				mysql_query($SQL);
 				
-             echo "<script>location.href='../$pagina.php?err=4';</script>";
+             echo "USUARIO REGISTRADO CORRECTAMENTE";
                                     
             }     
 	
