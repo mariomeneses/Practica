@@ -5780,3 +5780,12 @@ html body .navbar ul {
 html body .navbar ul li {
   display: inline-block;
 }
+html body ul {
+  list-style: none;
+}
+html body ul p {
+  color: red;
+}
+html body #cat {
+  color: ;
+}

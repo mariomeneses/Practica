@@ -34,11 +34,7 @@
 </head>
 <body>
 <nav class="navbar navbar-static-top" role="navigation">
-  <div class="container">
-    <ul>
-    	<li>Link 1</li>
-    	<li>Link 1</li>
-    	<li>Link 1</li>
-   </ul>
+    <div class="collapse navbar-collapse" >
+<?php wp_nav_menu( array( 'container' => false, 'menu_class' => 'span12 nav navbar-nav hidden-tablet hidden-phone main_menu', 'theme_location' => 'primary' ) ); ?>
   </div>
 </nav>

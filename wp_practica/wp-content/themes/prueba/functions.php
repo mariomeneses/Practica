@@ -20,3 +20,6 @@ if($datInputMain > $datOutput){
 	$css = $parser->getCss();
 	file_put_contents($outputFile, $css);
 }
+
+// This theme uses wp_nav_menu() in one location.
+register_nav_menu( 'primary', 'Primary Menu' );
