@@ -145,6 +145,119 @@ wp_reset_postdata();
 </ul>
 
 
+<ul>
+<p>POST en categoria 1 y sin categoría </p>
+	<?php
+		$query = new WP_Query( array( 'category__and' => array( 1,2)));
+		if ($query->have_posts()){
+			echo '<ul>';
+		while ($query->have_posts()) {
+			$query->the_post();
+			echo '<li>'. get_the_title() . '</li>';
+		}
+		echo '</ul>';
+		}else{
+
+		}
+		wp_reset_postdata();
+	?>
+</ul>
+
+<ul>
+<p>POST en categoria 2 y sin categoría </p>
+	<?php
+		$query = new WP_Query( array( 'category__and' => array( 1,3)));
+		if ($query->have_posts()){
+			echo '<ul>';
+		while ($query->have_posts()) {
+			$query->the_post();
+			echo '<li>'. get_the_title() . '</li>';
+		}
+		echo '</ul>';
+		}else{
+
+		}
+		wp_reset_postdata();
+	?>
+</ul>
+
+<p>MUESTRA 5 POST AL AZAR</p>
+<ul>
+<?php
+$args = array( 'posts_per_page' => 5, 'orderby' => 'rand' );
+$rand_posts = get_posts( $args );
+foreach ( $rand_posts as $post ) : 
+  setup_postdata( $post ); ?>
+	<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+<?php endforeach; 
+wp_reset_postdata(); ?>
+</ul>
+
+<p>MUESTRA 5 POST POR FECHA</p>
+<ul>
+<?php
+$args = array( 'posts_per_page' => 5, 'orderby' => 'post_date' );
+$rand_posts = get_posts( $args );
+foreach ( $rand_posts as $post ) : 
+  setup_postdata( $post ); ?>
+	<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+<?php endforeach; 
+wp_reset_postdata(); ?>
+</ul>
+
+<p>MUESTRA 5 POST ORDENADO POR TITULO</p>
+<ul>
+<?php
+$args = array( 'posts_per_page' => 5, 'orderby' => 'title', 'order' => 'ASC');
+$rand_posts = get_posts( $args );
+foreach ( $rand_posts as $post ) : 
+  setup_postdata( $post ); ?>
+	<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+<?php endforeach; 
+wp_reset_postdata(); ?>
+</ul>
+
+
+
+
+<p>MUESTRA TODOS LOS POST CON SU CONTENIDO ORDENADOS POR FECHA</p>
+<ul>
+<?php
+$args = array( 'posts_per_page' => -1, 'order'=> 'ASC', 'orderby' => 'post_date' );
+$postslist = get_posts( $args );
+foreach ( $postslist as $post ) :
+  setup_postdata( $post ); ?> 
+	<div>
+		<?php the_date(); ?>
+		<br />
+		<?php the_title(); ?>   
+		<?php the_excerpt(); ?>
+	</div>
+<?php
+endforeach; 
+wp_reset_postdata();
+?>
+</ul>
+
+<p>MUESTRA TODOS LOS POST ORDER BY MENU ORDER</p>
+<ul>
+<?php
+$args = array( 'posts_per_page' => -1, 'orderby' => 'menu_order');
+$postslist = get_posts( $args );
+foreach ( $postslist as $post ) :
+  setup_postdata( $post ); ?> 
+	<div>
+		<?php the_date(); ?>
+		<br />
+		<?php the_title(); ?>   
+		<?php the_excerpt(); ?>
+	</div>
+<?php
+endforeach; 
+wp_reset_postdata();
+?>
+</ul>
+
 
 
 
@@ -174,6 +287,11 @@ Contenido de los post sin categoria:
 
 
 
+SDFSFGSDFGSFGSF
+<?php
+$post_7 = get_post(7); 
+$title = $post_7->post_title;
+?> 
 
 
 
