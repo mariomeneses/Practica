@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  
+	$("#apa").click(function(){
+		$("#apaoc").show("slow");
+	});
+
+	$("#ocu").click(function(){
+		$("#apaoc").hide("slow");
+	});
+
+	$("#toggle").click(function(){
+		$("#toggle1").toggle("slow");
+	});
+
+
+});
+</script>
+
+
+</head>
+	<body>
+---------------EFECTO HIDE Y SHOW--
+
+		<button id="apa">Aparece</button>
+		<button id="ocu">Oculta</button>
+			<div id="apaoc">Aparece u oculta</div>
+			<br><br>
+---------------EFECTO CON 1 BOTON (toggle)--
+<br><br>
+		<BUTTON id="toggle">2x1</BUTTON>
+		<div id="toggle1"> Aparece y oculta</div>
+<br><br><br>
+---------------EFECTO FADE--
+
+
+	</body>
+</html>
