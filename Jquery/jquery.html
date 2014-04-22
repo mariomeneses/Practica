@@ -6,6 +6,7 @@
 
 <script>
 $(document).ready(function(){
+	//efectos hide
   
 	$("#apa").click(function(){
 		$("#apaoc").show("slow");
@@ -19,6 +20,23 @@ $(document).ready(function(){
 		$("#toggle1").toggle("slow");
 	});
 
+//efectos fade
+	$("#fout").click(function(){
+		$("#arbol3").fadeOut("slow")
+		alert('oculto')
+	});
+
+	$("#fin").click(function(){
+		$("#arbol3").fadeIn("slow")
+	});
+
+	$(function(){
+		$("#fdin").click(function(){
+			$("#arbol1").attr("src","img/arbol2.jpeg");
+			return false;
+		});
+	});
+
 
 });
 </script>
@@ -26,7 +44,7 @@ $(document).ready(function(){
 
 </head>
 	<body>
----------------EFECTO HIDE Y SHOW--
+---------------<h1>EFECTO HIDE Y SHOW</h1>--
 
 		<button id="apa">Aparece</button>
 		<button id="ocu">Oculta</button>
@@ -37,7 +55,19 @@ $(document).ready(function(){
 		<BUTTON id="toggle">2x1</BUTTON>
 		<div id="toggle1"> Aparece y oculta</div>
 <br><br><br>
----------------EFECTO FADE--
+---------------<h1>EFECTO FADE</h1>--
+<br><br>EFECTO FADE OUT
+<br><br>
+	<div id="fout" style="color:blue">Click FadeOut</div>
+	<div id="fin" style="color:green">Click FadeIn</div>
+<br><br>
+		<img id="arbol3" src="img/3.jpeg" alt=""  width="200" height="200">
+
+<br><br>Efectos fade IN
+<br><br>
+	<div id="fdin" style="color:blue">Click aqui</div>
+		<img id="arbol1" src="img/1.jpeg" alt=""  width="200" height="200">
+
 
 
 	</body>
